@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undefind</title>
+</head>
+<body>
+    <script>
+        let name = "";
+        if (name === undefined) {
+            console.info("Undefined");
+        } else {
+            console.info("Defined");
+        }
+
+        const names = ["Andika", "Auli", "Ahbab", "Mahasin"];
+        if(names[4] === undefined) {
+            document.writeln("ARRAY UNDEFINED");
+        } else {
+            document.writeln("ARRAY DEFINED");
+        }
+
+        const person = {
+            name: "Andika Auli Ahbab Mahasin"
+        };
+        if (person.name === undefined) {
+            document.writeln("OBJECT UNDEFINED");
+        } else {
+            document.writeln("OBJECT DEFINED");
+        }
+    </script>
+</body>
+</html>

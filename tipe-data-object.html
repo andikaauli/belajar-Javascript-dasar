@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Object</title>
+</head>
+<body>
+    <script>
+        const orang = {};
+
+        //menambah atau Mengubah
+        orang["nama"] = "Andika Auli Ahbab";
+        orang["alamat"] = "Semarang";
+        orang["umur"] = 22;
+
+        console.table(orang);
+        delete orang["umur"]; //hapus
+        console.table(orang);
+
+        const people = {
+            "nama lengkap": "Andika Auli Ahbab",
+            nama: "Dika",
+            alamat: "Semarang",
+            umur: 22
+        };
+
+        console.table(people);
+
+        console.info(`Nama lengkap: ${people["nama lengkap"]}`);
+        console.info('Nama: ' + people["nama"]);
+        console.info(`Alamat: ${people.alamat}`)
+        console.info(`Umur: ${people.umur}`)
+    </script>
+</body>
+</html>

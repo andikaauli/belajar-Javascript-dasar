@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statement</title>
+</head>
+<body>
+    <script>
+        // const nilaiAngka = 59;
+        // if (nilaiAngka > 75) {
+        //     nilai = "A";
+        // } else if (nilaiAngka > 60) {
+        //     nilai = "B";
+        // } else if (nilaiAngka > 40) {
+        //     nilai = "C";
+        // } else {
+        //     nilai = "D";
+        // }
+        
+         const nilai = "A";
+
+        switch(nilai) {
+            case "A":
+                document.writeln("Wow Anda Lulus dengan Nilai A");
+                break;
+            case "B":
+                document.writeln("Wow Anda Lulus dengan Nilai B");
+                break;
+            case "C":
+            case "D":
+                document.writeln("Maaf Anda Tidak Lulus");
+                break;
+            default:
+                document.writeln("Mungkin Anda Salah Jurusan");
+                break;
+        }
+
+        //versi if
+        // if(nilai == "A") {
+        //     document.writeln("Wow Anda Lulus dengan Nilai A");
+        // } else if (nilai == "B") {
+        //     document.writeln("Wow Anda Lulus dengan Nilai B");
+        // } else if (nilai == "C" || nilai == "D") {
+        //     document.writeln("Maaf Anda Tidak Lulus");
+        // } else {
+        //     document.writeln("Mungkin Anda Salah Jurusan");
+        // }
+    </script>
+</body>
+</html>

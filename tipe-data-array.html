@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Array</title>
+</head>
+<body>
+    <script>
+        let arrayKosong = [];
+        let arrayNama = ["Andika", "Auli", "Ahbab", "Mahasin", 1, true];
+        document.writeln(arrayKosong);
+        document.writeln("</br>");
+        document.writeln(arrayNama[0]);
+
+        const names = [];
+        names.push("Andika");
+        names.push("Auli", "Ahbab", "Mahasin");
+        names.push("Budi", "Jono", "Lala", "Tono");
+        names[0] = "Ronaldo";
+        
+        console.table(names);
+        console.info(names.length)
+
+        console.info(names[0]);
+        console.info(names[1]);
+        console.info(names[2]);
+        console.info(names[3]);
+
+        names[0] = "Lionel";
+        names[1] = "Andres";
+        names[2] = "Messi"
+
+        console.table(names);
+
+        delete names[3];
+        console.table(names);
+
+        names.push("Neymar");
+        console.table(names);
+
+        names[3] = "Cristiano";
+        console.table(names);
+
+        names.push(1,2,3,4,5,6);
+        names.push(["Ronaldo", "Messi", "Neymar", "Cristiano"]);
+        console.table(names);
+    </script>
+</body>
+</html>

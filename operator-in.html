@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator In</title>
+</head>
+<body>
+    <script>
+        const person = {
+            firstName : "Andika",
+            middleName : undefined,
+            lastName : "Ahbab"
+        };
+        
+        if ("fullName" in person) {
+            document.writeln("di dalam object person");
+        } else {
+            document.writeln("tidak di dalam object person");
+        }
+
+        const result = "middleName" in person;
+        document.writeln("<p>" + result + "</p>");
+
+        const name = [null, "Andika", null]
+        const resultName = 0 in name;
+        document.writeln("<p>" + resultName + "</p>");
+    </script>
+</body>
+</html>
