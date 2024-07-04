@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+        {
+            //Array
+            const names = ["Andika", "Auli", "Ahbab", "Mahasin", "Joko", "Hadi"];
+            const [firstName, middleName, , lastName, ...others] = names;
+            console.info(firstName, middleName, lastName);
+
+        }
+
+        
+    {
+        //Object
+        const person = {
+            firstName: "Andika",
+            middleName: "Auli",
+            lastName: "Ahbab",
+            address: {
+                city: "Jakarta",
+                country: "Indonesia"
+            },
+            hobby: "Programming",
+            channel: "andikaauli"
+        };
+        const {firstName: fn, middleName: mn, lastName: ln, address, ...others} = person;
+        console.info(fn, mn, ln, address, others);
+    }
+
+    {
+        //Nested Object
+        const person = {
+            firstName: "Andika",
+            middleName: "Auli",
+            lastName: "Ahbab",
+            address: {
+                city: "Jakarta",
+                country: "Indonesia"
+            },
+            hobby: "Programming",
+            channel: "andikaauli"
+        };
+        const {firstName: fn, middleName: mn, lastName: ln, address: {city, country}, ...others} = person;
+        console.info(fn, mn, ln, city, country, others);
+    }
+
+    {
+        //Function Parameter
+        function sayHello({firstName, middleName, lastName}) {
+            console.info(firstName, middleName, lastName);
+        }
+        const person ={
+            firstName: "Satu",
+            middleName: "Dua",
+            lastName: "Tiga"
+        };
+        sayHello(person);
+    }
+
+    {
+        //Function Parameter Array
+        function sum([first, second]) {
+            return first + second;
+        }
+        console.info(sum([1, 2]));
+        console.info(sum([10, 20]));
+    }
+
+    {
+        //Default Value
+        const names = ["Andika", "Joko", "Budi"];
+        const [firstName, middleName ="Auli", lastName = "Ahbab"] = names;
+
+        console.info(firstName, middleName, lastName);
+    }
+
+    {
+        //Default Value & Menggunakan nama variabel lain
+        const person = {
+            firstName: "Andika",
+            middleName: "Joko",
+            lastName: "Budi",
+        };
+        const {firstName: fn, middleName: mn ="Auli", lastName: ln = "Mahasin"} = person;
+        console.info(fn, mn, ln);
+    }
+    </script>
+</body>
+</html>

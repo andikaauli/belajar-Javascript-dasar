@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Arrow</title>
+</head>
+<body>
+    <script>
+        const sayHello = (name) => {
+            document.writeln(`<p>Hello ${name}</p>`);
+        }
+        sayHello("Dika 1");
+
+        //Arrow Function
+        const sayHello2 = (name) => {
+            const say = `Hello ${name}`;
+            document.writeln(`<p>${say}</p>`);
+        }
+        sayHello2("Dika 2");
+
+        //Arrow Function simple
+        const sayHello3 = (name) => document.writeln(`<p>Hello ${name}</p>`);
+        sayHello3("Dika 3");
+
+        //Arrow Function parameter tanpa ()
+        const sayHello4 = name => document.writeln(`<p>Hello ${name}</p>`);
+        sayHello4("Dika 4");
+
+        //Arrow Function return value
+        const sum = (first, second) =>{
+            return first + second;
+        };
+
+        document.writeln(sum(10,20));
+
+        //Arrow Function return value simpel
+        const sum2 = (first, second) => first + second;
+        document.writeln(sum2(20,20));
+
+        function giveMeName2(callback) {
+            callback("Andika");
+        }
+
+        //Anonymus Funcion
+        // giveMeName(function(name){
+        //     document.writeln(`<p>Halo ${name}</p>`);
+        // })
+
+        //Arrow Function
+        giveMeName2(name => document.writeln(`<p>Halo ${name}</p>`));
+    </script>
+</body>
+</html>

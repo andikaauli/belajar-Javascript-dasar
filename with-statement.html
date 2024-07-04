@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With Statement</title>
+</head>
+<body>
+    <script>
+        //Tanpa With Statement
+        let person = {
+            firsName: "Andika",
+            middleName: "Auli",
+            lastName: "Ahbab"
+        };
+        document.writeln(person.firsName);
+        document.writeln("</br>");
+        document.writeln(person.middleName);
+        document.writeln("</br>");
+        document.writeln(person.lastName);
+        document.writeln("</br>");
+
+        //Dengan With Statemnt
+        let names = {
+            firsName: "Andika",
+            middleName: "Auli",
+            lastName: "Ahbab"
+        };
+        with (names) {
+            document.writeln("</br>");
+            document.writeln(firsName);
+            document.writeln("</br>");
+            document.writeln(middleName);
+            document.writeln("</br>");
+            document.writeln(lastName);
+        }
+    </script>
+</body>
+</html>

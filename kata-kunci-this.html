@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata Kunci This</title>
+</head>
+<body>
+    <script>
+        document.writeln(this) //window
+
+        function sample() {
+            document.writeln(this); //window
+
+            function inner() {
+                document.writeln(this); //window
+            }
+            inner();
+        }
+
+        sample();
+
+        const person = {
+            name: "Andika",
+            sayHello: function(value) {
+                document.writeln(`Hello ${value} my name is ${this.name}`); //ngambil object person
+            }
+        };
+        person.sayHello("Budi");
+        person.sayHello("Joko");
+    </script>
+</body>
+</html>

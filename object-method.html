@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Method</title>
+</head>
+<body>
+    <script>
+        //Cara 1
+        // const person = {
+        //     name: "Andika",
+        //     sayHello: function(name) {
+        //         document.writeln (`Hello ${name}`);
+        //     }
+        // }
+
+        //Cara 2
+        const person = {
+            name: "Andika",
+        }
+        person.sayHello = function(name) {
+            document.writeln (`Hello ${name}`);
+        }
+
+        person.sayHello("budi");
+    </script>
+</body>
+</html>

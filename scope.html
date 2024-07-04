@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <script>
+        //global scope
+        let counter = 0;
+
+        //global scope
+        function hitMe(){
+            //local scope hitMe()
+            //tidak bisa mengakses function yg ada di dalam other() krn local scope
+            counter++;
+        }
+
+        function other(){
+            //local scope other()
+            //tidak bisa mengakses function yg ada di dalam hitMe() krn local scope
+        }
+
+        hitMe();
+        hitMe();
+        document.writeln(counter)
+
+        function first(){
+           let  firstVariable = "pertama";
+           console.info(firstVariable); //bisa
+        }
+
+        function second(){
+           let secondVariable = "kedua";
+           console.info(secondVariable); //bisa
+        }
+
+        first()
+        second()
+        ///console.info(firstVariable);//Error cannot access local scope
+        //console.info(secondVariable);//Error cannot access local scoper
+
+        //Function didalam Function (Nested Function)
+
+        function third(){
+            let thirdVariable = "tiga";
+            function thirdNested(){
+                console.info(thirdVariable);
+            }
+
+            thirdNested();
+        }
+
+        third();
+    </script>
+</body>
+</html>

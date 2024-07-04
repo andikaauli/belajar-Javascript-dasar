@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consonant Extractor</title>
+</head>
+<body>
+    <h1>Enter a string:</h1>
+    <input type="text" id="inputString">
+    <button onclick="extractConsonants()">Submit</button>
+    <p id="output"></p>
+
+    <script>
+        function extractConsonants() {
+            // Get the input string from the user
+            var inputString = document.getElementById("inputString").value;
+
+            // Define a regular expression to match consonants
+            var consonants = inputString.match(/[^aeiouAEIOU\s\W\d]/g);
+
+            // Join the matched consonants into a single string and display them
+            var result = consonants ? consonants.join('') : '';
+
+            // Output the result
+            document.getElementById("output").innerText = "Consonants: " + result;
+        }
+    </script>
+</body>
+</html>
